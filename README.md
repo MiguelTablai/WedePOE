@@ -63,7 +63,11 @@ References
 
 -Canva. (2025). Available at: https://www.canva.com/dream-lab?adj=eyJBIjoiVSJ9 [Accessed 27 Aug. 2025].
 
-‌
+‌SITEMAP
+
+
+<img width="1920" height="1080" alt="FrostFlow Sitemap" src="https://github.com/user-attachments/assets/ce3e82af-694e-46e5-8910-6c8f803437d3" />
+
 
 ‌
 
