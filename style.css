@@ -1,5 +1,5 @@
 
-/* 2.2 Establish a Base Style and CSS Reset */
+/* 2.2 Base Style and CSS Reset */
 * {
   margin: 0;
   padding: 0;
@@ -129,7 +129,7 @@ footer {
 
 /* 3.1 Breakpoints */
 
-/* Tablets (max-width: 992px) */
+/* Tablets */
 @media (max-width: 992px) {
   .container {
     grid-template-columns: 1fr; /* Stack layout */
@@ -137,8 +137,8 @@ footer {
   }
 
   nav ul {
-    flex-direction: column;
     gap: 10px;
+    align-items: center;
   }
 
   body {
@@ -146,7 +146,7 @@ footer {
   }
 }
 
-/* Mobile (max-width: 600px) */
+/* Mobile */
 @media (max-width: 600px) {
   body {
     font-size: 14px; /* Smaller text for mobile */
@@ -170,8 +170,8 @@ footer {
   }
 
   nav ul {
-    flex-direction: column;
     gap: 8px;
+    align-items: center;
   }
 
   button {
