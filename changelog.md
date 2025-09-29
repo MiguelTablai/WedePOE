@@ -17,6 +17,7 @@ POE Part2
 Completed 29 September 2025:
 
 
+
 -Added more content to homepage (feedback from POE part1).
 
 -Updated code for navigation bar. made it more structured ( Ul= unordered list, Li= list item).
