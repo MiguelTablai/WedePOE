@@ -1,0 +1,208 @@
+
+/* 2.2 Establish a Base Style and CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #000000;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #215F9A;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 2.3 Typography Styles */
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+/* 2.4 Layout Structure */
+
+/* Grid-based container */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navigation Menu */
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav ul li {
+  padding: 10px;
+}
+
+/* 2.5 Visual Styles */
+
+/* Header */
+header {
+  background-color: #D1A054;
+  color: #0D0D0D;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Buttons */
+button {
+  background-color: #215F9A;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  background-color: #003f80;
+}
+
+/* Form Inputs */
+input,
+textarea,
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #007bff;
+}
+
+/* Footer */
+footer {
+  background-color: #215F9A;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+
+/* 3.1 Breakpoints */
+
+/* Tablets (max-width: 992px) */
+@media (max-width: 992px) {
+  .container {
+    grid-template-columns: 1fr; /* Stack layout */
+    padding: 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  body {
+    font-size: 15px; /* Slightly smaller text */
+  }
+}
+
+/* Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px; /* Smaller text for mobile */
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr; /* Single column */
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  button {
+    width: 100%; /* Full-width buttons on small screens */
+  }
+}
+
+/* 3.2 Relative Units */
+body {
+  font-size: 1rem; /* Base font size */
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+/* 3.3 Responsive Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
