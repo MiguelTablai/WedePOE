@@ -69,6 +69,78 @@ References
 <img width="1920" height="1080" alt="FrostFlow Sitemap" src="https://github.com/user-attachments/assets/ce3e82af-694e-46e5-8910-6c8f803437d3" />
 
 
+
+POE PART2
+
+
+Part 2 – CSS Styling and Responsive Design (Completed on 29 Sept 2025)
+
+Changes Made
+
+- Created external stylesheet (`style.css`)**
+  - Linked stylesheet to all HTML files in the `<head>` section.
+  - Applied CSS reset for consistency across browsers.
+
+- Base Styles
+  - Set body font-family to sans-serif.
+  - Applied global colors, line-height, and background color.
+  - Styled anchor tags with hover underline effect.
+
+- Typography
+  - Defined consistent heading hierarchy (`h1`, `h2`, `h3`).
+  - Adjusted paragraph spacing and letter-spacing for readability.
+
+- Layout
+  - Implemented grid-based container with two-column desktop layout.
+  - Styled navigation menu with Flexbox.
+
+- Visual Styles
+  - Added background color and text styles for header and footer.
+  - Styled buttons with hover and active states.
+  - Styled input, text area, and select fields with borders and effects.
+ 
+- Responsive Design
+  - Added breakpoints:
+    - Tablets (≤ 992px):Single-column layout, smaller fonts.
+    - Mobile (≤ 600px):Compact typography, full-width buttons, simplified spacing.
+  - Applied relative units (`rem`, `%`) for scalable typography and spacing.
+  - Made images responsive (`max-width: 100%; height: auto;`).
+
+- Testing Evidence
+- Verified responsiveness using Chrome DevTools on different screen sizes:
+- Confirmed navigation and buttons adapt to screen width.
+- Confirmed images resize proportionally on smaller screens.
+
+SCREENSHOTS:
+
+IPAD AIR
+<img width="1919" height="959" alt="Screenshot 2025-09-29 153642" src="https://github.com/user-attachments/assets/83d51561-db8a-4c7e-8040-b7bc385c8089" />
+
+
+IPHONE 12
+<img width="1919" height="959" alt="Screenshot 2025-09-29 153609" src="https://github.com/user-attachments/assets/eab6fe0e-46bf-4e40-8228-04f614e4b2a4" />
+
+
+WEBPAGE BEFORE
+<img width="1919" height="1079" alt="Screenshot 2025-09-29 132951" src="https://github.com/user-attachments/assets/9ce67de7-f7dd-4154-ab12-98f056b152e2" />
+
+WEBPAGE AFTER PART2
+<img width="1919" height="958" alt="Screenshot 2025-09-29 153729" src="https://github.com/user-attachments/assets/70bd4025-b34b-48df-a431-55e93b801d39" />
+
+
+
+-References
+  - www.w3schools.com. (n.d.). CSS Reference. [online] Available at: https://www.w3schools.com/cssref/.
+  - Mozilla (2019). Responsive design. [online] MDN Web Docs. Available at: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design.
+  - Coyier, C. (2018). A Complete Guide to Flexbox | CSS-Tricks. [online] CSS-Tricks. Available at: https://css-tricks.com/snippets/css/a-guide-to-flexbox/.
+  - Anon, (n.d.). Available at: https://brandfetch.com/picknpay.co.za.
+
+‌
+
+‌
+
+‌
+
 ‌
 
 ‌
