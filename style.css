@@ -101,7 +101,11 @@ button:active {
   background-color: #003f80;
 }
 
-/* Form Inputs */
+/* Forms */
+form {
+  max-width: 400px;
+  margin: 0 ;
+}
 input,
 textarea,
 select {
