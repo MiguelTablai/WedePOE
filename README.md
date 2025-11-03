@@ -139,6 +139,87 @@ WEBPAGE AFTER PART2
 
 ‌
 
+‌POE PART 3
+
+
+Part 3 - Enhancing functionality and SEO (Completed on 3 November 2025)
+
+Changes made:
+
+
+
+
+-Added Interactive elements using JavaScript frameworks.
+
+
+
+-Added Google mpas integration.
+
+
+
+-Implemented search functionality on retailers page
+
+
+
+-Added and adjusted various On-screen SEO's such as:
+
+
+
+
+•Keywords
+
+•Title tags and Meta descriptions
+
+•Header tags
+
+•Image Optimisation
+
+•URL structure
+
+•Internal Linking
+
+•Mobile Friendliness
+
+
+-Added Social media links in the footer as off-screan SEO,s.
+
+-Added enquiry form on contact page for customers to enquire about products.
+
+-Added enquiry.js file forclient-side validation and enquiry simulation
+
+
+REFERENCES
+
+•Bredenkamp, S. (2025). Revolutionizing Cold Brew: The Science Behind Ultrasonic Coffee. [online] The Coffee Blog. Available at: https://thecoffeeblog.co.za/brewing-methods/revolutionizing-cold-brew-the-science-behind-ultrasonic-coffee/?utm_source=chatgpt.com
+
+
+•Zania@dmin (2022). The Best Coffee Beans For Cold Brew - Aquazania. [online] Aquazania. Available at: https://www.aquazania.co.za/the-best-coffee-beans-for-cold-brew/?utm_source=chatgpt.com.
+
+•Lucky Goat Coffee. (2025). How To Make Cold Brew Coffee: DIY Cold Brew at Home. [online] Available at: https://luckygoatcoffee.com/blogs/news/how-to-make-cold-brew-coffee?srsltid=AfmBOoom3yGnmdsaEk9eCxy4ENstTyG4xj7LGfLZx_rbapHv7d6cVPJp&utm_source=chatgpt.com.
+
+•Wikipedia Contributors (2020). Food Lover’s Market. [online] Wikipedia. Available at: https://en.wikipedia.org/wiki/Food_Lover%27s_Market.
+
+‌•Seeklogo. (2025). Pick N Pay Logo PNG Vectors Free Download. [online] Available at: https://seeklogo.com/free-vector-logos/pick-n-pay.
+
+‌‌•Seeklogo. (2025). Search: spar Logo PNG Vectors Free Download. [online] Available at: https://seeklogo.com/search?q=spar.
+
+‌‌‌•Seeklogo. (2025). Search: woolworths Logo PNG Vectors Free Download. [online] Available at: https://seeklogo.com/search?q=woolworths.
+
+‌‌‌•‌Seeklogo. (2025). Search: Checkers Logo PNG Vectors Free Download. [online] Available at: https://seeklogo.com/search?q=Checkers.
+
+‌‌‌•Maureen (2019). Makro Logo. [online] Pinterest. Available at: https://in.pinterest.com/pin/makro-logo-png-logo-vector-brand-downloads--119978777568386840/.
+
+‌‌‌‌•DeepAI (2025). AI Image Generator. [online] DeepAI. Available at: https://deepai.org/machine-learning-model/text2img.
+
+‌•Canva (2025). Free Online AI Image Generator. [online] Canva. Available at: https://www.canva.com/ai-image-generator/.
+
+‌
+
+‌
+
+‌‌
+
+
 ‌
 
 ‌
