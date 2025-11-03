@@ -162,4 +162,18 @@ if (currentPage === "contact.html") {
     });
   }
 }
- 
+
+/* ========= 6. Footer Enhancement (Applies to All Pages) ========= */
+const footer = document.querySelector("footer");
+if (footer) {
+  const year = new Date().getFullYear();
+
+  let copy = footer.querySelector(".copyright");
+  if (!copy) {
+    copy = document.createElement("p");
+    copy.className = "copyright";
+    footer.appendChild(copy); // append, does not overwrite other footer content
+  }
+
+  copy.textContent = `© ${year} FrostFlow Cold Brew Co. | All Rights Reserved.`;
+}
