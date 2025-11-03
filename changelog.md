@@ -33,3 +33,34 @@ Completed 29 September 2025:
 -Company logo moved below header and centered on all pages.
 
 -On mobile/tablet screens, aligned nav bar into a horizontal list and centered. Changed my mind from a vertical list.
+
+
+
+POE Part3
+
+
+
+Completed between 29 September - 3rd November 2025
+
+
+
+
+-Added greeting under heading when loading homepage.
+
+-Added transform + transition effect to product table on mouse hover.
+
+-Added retailer search bar on retailer page.
+
+-Added expandable & collapsible blog previous on blog page.
+
+-Added form validation on contact page.
+
+-Added and adjusted various on page SEO's
+
+-Added social media links to footer.
+
+-Added Javasript enchancement to footer (copyright).
+
+-Added enquiry form on contact page for customers to enquire about products.
+
+-Added enquiry.js file client side validation & enquiry simulation.

@@ -65,10 +65,12 @@ nav ul {
   list-style: none;
   justify-content: center;
   gap: 20px;
+  color: #215F9A;
 }
 
 nav ul li {
   padding: 10px;
+  color: #215F9A;
 }
 
 /* 2.5 Visual Styles */
@@ -193,6 +195,7 @@ footer a {
 /* 3.2 Relative Units */
 body {
   font-size: 1rem; /* Base font size */
+  padding: 0 2px; /* keeps text away from the screen edges on small devices */
 }
 
 h1 {
@@ -217,3 +220,104 @@ img {
   height: auto;
   display: block;
 }
+
+/* Enquiry Form */
+form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+form input, form select, form textarea {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+#responseMessage {
+  font-size: 1.1rem;
+}
+
+/* Table Styling */
+main table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;        
+  margin: 12px 0;
+}
+
+main table td,
+main table th {
+  padding: 12px;
+  vertical-align: top;
+  text-align: center; /* center everything in the cell */
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+main table td img {
+  display: block;
+  margin: 0 auto 8px; /* center images and give a gap */
+  max-width: 100px;          
+  height: auto;
+}
+
+main table td p,
+main table td b,
+main table td figure,
+main table td figcaption {
+  margin: 0;
+  text-align: center; /* ensure names/captions are centered */
+  font-weight: 600;
+}
+
+/* Table styling for small screens */
+@media (max-width: 600px) {
+  main table,
+  main table thead,
+  main table tbody,
+  main table tr,
+  main table th,
+  main table td {
+    display: block;
+    width: 100%;
+  }
+  main table td {
+    margin-bottom: 12px;
+    text-align: left;         
+  }
+  main table td img {
+    margin-left: 0;
+  }
+}
+
+/* Ensure retailer table content is centered */
+main table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+main table th,
+main table td {
+  padding: 12px;
+  vertical-align: top;
+  text-align: center; /* center everything in each cell */
+}
+
+main table td img {
+  display: block;
+  margin: 0 auto 8px; /* center images and give a gap */
+  max-width: 100px;
+  height: auto;
+}
+
+main table td p,
+main table td b,
+main table td figure,
+main table td figcaption {
+  margin: 0;
+  text-align: center; /* ensure names/captions are centered */
+  font-weight: 600;
+}
+
+

@@ -33,7 +33,7 @@ if (currentPage === "products.html") {
       cell.style.transformOrigin = "center center";
 
       cell.addEventListener("mouseenter", () => {
-        cell.style.backgroundColor = "#f5f5f5";
+        cell.style.backgroundColor = "#396ea0ff";
         cell.style.transform = "scale(1.05)"; // slight enlargement
       });
 
@@ -47,30 +47,151 @@ if (currentPage === "products.html") {
 
 /* ========= 3. Retailers Page Enhancements ========= */
 if (currentPage === "retailers.html") {
-  const table = document.querySelector("table");
+  const table = document.querySelector("main table");
   if (table) {
-    // Create a search bar
+    // wrapper & input
+    const wrapper = document.createElement("div");
+    wrapper.className = "retailer-search-wrapper";
+    wrapper.style.margin = "12px 0";
+    wrapper.style.position = "relative";
     const searchInput = document.createElement("input");
-    searchInput.type = "text";
+    searchInput.type = "search";
     searchInput.placeholder = "Search retailers...";
-    searchInput.style.marginBottom = "10px";
     searchInput.style.padding = "8px";
-    searchInput.style.width = "250px";      // <-- set desired width
-    searchInput.style.maxWidth = "90%";     // <-- keeps it responsive on small screens
-    table.parentNode.insertBefore(searchInput, table);
+    searchInput.style.width = "250px";
+    searchInput.style.maxWidth = "90%";
+    searchInput.setAttribute("aria-label", "Search retailers");
+    wrapper.appendChild(searchInput);
 
-    // Filter retailers
-    searchInput.addEventListener("keyup", () => {
-      const filter = searchInput.value.toLowerCase();
-      const rows = table.querySelectorAll("tr");
+    // suggestions dropdown
+    const sugg = document.createElement("ul");
+    sugg.className = "retailer-suggestions";
+    sugg.style.listStyle = "none";
+    sugg.style.padding = "6px";
+    sugg.style.margin = "6px 0 0 0";
+    sugg.style.border = "1px solid #ccc";
+    sugg.style.background = "#fff";
+    sugg.style.maxHeight = "160px";
+    sugg.style.overflowY = "auto";
+    sugg.style.width = "250px";
+    sugg.style.maxWidth = "90%";
+    sugg.style.display = "none";
+    sugg.style.position = "absolute";
+    sugg.style.zIndex = "1000";
+    wrapper.appendChild(sugg);
 
-      rows.forEach((row, i) => {
-        if (i === 0) return; 
-        const text = row.textContent.toLowerCase();
-        row.style.display = text.includes(filter) ? "" : "none";
+    // display chosen / matched name
+    const display = document.createElement("div");
+    display.className = "retailer-selected";
+    display.style.marginTop = "8px";
+    display.style.fontWeight = "600";
+    wrapper.appendChild(display);
+
+    table.parentNode.insertBefore(wrapper, table);
+
+    // collect retailer names from table cells
+    const rows = Array.from(table.querySelectorAll("tr"));
+    const dataRows = rows.filter((r, i) => !(i === 0 && r.querySelectorAll("th").length > 0));
+    const names = Array.from(
+      new Set(
+        dataRows.map((r) => {
+          const b = r.querySelector("td b");
+          if (b && b.textContent.trim()) return b.textContent.trim();
+          const firstTd = r.querySelector("td");
+          return firstTd ? firstTd.textContent.trim().split("\n")[0].trim() : r.textContent.trim();
+        })
+      )
+    ).filter(Boolean);
+
+    // helper to render suggestions
+    const renderSuggestions = (q) => {
+      sugg.innerHTML = "";
+      if (!q) {
+        sugg.style.display = "none";
+        return;
+      }
+      const ql = q.toLowerCase();
+      const matches = names.filter((n) => n.toLowerCase().includes(ql));
+      if (matches.length === 0) {
+        const li = document.createElement("li");
+        li.textContent = "No matches";
+        li.style.padding = "6px";
+        sugg.appendChild(li);
+        sugg.style.display = "block";
+        return;
+      }
+      matches.forEach((m) => {
+        const li = document.createElement("li");
+        li.textContent = m;
+        li.style.padding = "6px";
+        li.style.cursor = "pointer";
+        li.addEventListener("click", () => {
+          searchInput.value = m;
+          sugg.style.display = "none";
+          display.textContent = m; // show chosen name
+          filterRows(); // apply filter to table
+        });
+        li.addEventListener("mouseenter", () => (li.style.background = "#f0f0f0"));
+        li.addEventListener("mouseleave", () => (li.style.background = "transparent"));
+        sugg.appendChild(li);
       });
+      sugg.style.display = "block";
+    };
+
+    // filtering function: shows/hides rows based on input value
+    const filterRows = () => {
+      const q = searchInput.value.trim().toLowerCase();
+      if (q === "") {
+        dataRows.forEach((r) => (r.style.display = ""));
+        display.textContent = "";
+        return;
+      }
+      let firstMatch = "";
+      dataRows.forEach((r) => {
+        const text = r.textContent.trim().toLowerCase();
+        const show = text.includes(q);
+        r.style.display = show ? "" : "none";
+        if (show && !firstMatch) {
+          // extract display name for the first matching row
+          const b = r.querySelector("td b");
+          firstMatch = (b && b.textContent.trim()) || (r.querySelector("td") && r.querySelector("td").textContent.trim());
+        }
+      });
+      display.textContent = firstMatch || ""; // show first matched retailer name
+    };
+
+    // input handlers
+    searchInput.addEventListener("input", (e) => {
+      const q = e.target.value.trim();
+      renderSuggestions(q);
+      filterRows();
     });
-    }
+
+    // keyboard behaviors: Enter selects first suggestion, Escape clears
+    searchInput.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        searchInput.value = "";
+        sugg.style.display = "none";
+        filterRows();
+      } else if (e.key === "Enter") {
+        // if suggestions visible, pick the first one
+        const first = sugg.querySelector("li");
+        if (first && first.textContent !== "No matches") {
+          e.preventDefault();
+          const val = first.textContent;
+          searchInput.value = val;
+          display.textContent = val;
+          sugg.style.display = "none";
+          filterRows();
+        }
+      }
+    });
+
+    // click outside to close suggestions
+    document.addEventListener("click", (ev) => {
+      if (!wrapper.contains(ev.target)) sugg.style.display = "none";
+    });
+  }
 }
 
 /* ========= 4. Blog Page Enhancements ========= */
