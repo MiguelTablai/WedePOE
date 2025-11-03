@@ -1,4 +1,4 @@
-// enquiry.js — handles AJAX-based form submission for FrostFlowCo
+// enquiry.js — AJAX-based form submission 
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("enquiryForm");

@@ -1,7 +1,7 @@
 // Helper: Detect current page by filename
 const currentPage = window.location.pathname.split("/").pop();
 
-/* ========= 1. Homepage Enhancements ========= */
+/* Homepage Enhancements */
 // Dynamic Greeting based on time of day
 if (currentPage === "index.html" || currentPage === "") {
   const header = document.querySelector("header h1");
@@ -22,7 +22,7 @@ if (currentPage === "index.html" || currentPage === "") {
   }
 }
 
-/* ========= 2. Products Page Enhancements ========= */
+/* Products Page Enhancements */
 if (currentPage === "products.html") {
   const table = document.querySelector("main table");
   if (table) {
@@ -45,10 +45,27 @@ if (currentPage === "products.html") {
   }
 }
 
-/* ========= 3. Retailers Page Enhancements ========= */
+/* Retailers Page Enhancements */
 if (currentPage === "retailers.html") {
   const table = document.querySelector("main table");
   if (table) {
+    // --- Apply same hover/scale effect used on products table ---
+    const cellsForHover = table.querySelectorAll("td");
+    cellsForHover.forEach((cell) => {
+      cell.style.transition = "background-color 0.25s ease, transform 0.15s ease";
+      cell.style.transformOrigin = "center center";
+
+      cell.addEventListener("mouseenter", () => {
+        cell.style.backgroundColor = "#396ea0ff";
+        cell.style.transform = "scale(1.05)";
+      });
+
+      cell.addEventListener("mouseleave", () => {
+        cell.style.backgroundColor = "transparent";
+        cell.style.transform = "none";
+      });
+    });
+
     // wrapper & input
     const wrapper = document.createElement("div");
     wrapper.className = "retailer-search-wrapper";
@@ -194,7 +211,7 @@ if (currentPage === "retailers.html") {
   }
 }
 
-/* ========= 4. Blog Page Enhancements ========= */
+/* Blog Page Enhancements */
 if (currentPage === "blog.html") {
   const paragraphs = document.querySelectorAll("article p");
   paragraphs.forEach((p, idx) => {
@@ -203,7 +220,7 @@ if (currentPage === "blog.html") {
 
     const fullHTML = p.innerHTML.trim();
     const fullText = p.textContent.trim();
-    const maxLen = 120; // adjust preview length
+    const maxLen = 120; 
 
     // if short already, no toggle needed
     if (fullText.length <= maxLen) {

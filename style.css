@@ -127,11 +127,11 @@ footer {
   padding: 12px 16px;
   text-align: center;
   background: #215F9A;
-  color: #ffffff; /* default footer text color */
+  color: #ffffff; 
 }
 
 footer a {
-  color: inherit;       /* use footer color or set a visible color like #0a66c2 */
+  color: inherit;       
   text-decoration: none;
   margin: 0 6px;
   display: inline-block;
@@ -249,14 +249,14 @@ main table td,
 main table th {
   padding: 12px;
   vertical-align: top;
-  text-align: center; /* center everything in the cell */
+  text-align: center; 
   word-wrap: break-word;
   overflow: hidden;
 }
 
 main table td img {
   display: block;
-  margin: 0 auto 8px; /* center images and give a gap */
+  margin: 0 auto 8px; 
   max-width: 100px;          
   height: auto;
 }
@@ -266,7 +266,7 @@ main table td b,
 main table td figure,
 main table td figcaption {
   margin: 0;
-  text-align: center; /* ensure names/captions are centered */
+  text-align: center; 
   font-weight: 600;
 }
 
@@ -290,34 +290,7 @@ main table td figcaption {
   }
 }
 
-/* Ensure retailer table content is centered */
-main table {
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed;
-}
 
-main table th,
-main table td {
-  padding: 12px;
-  vertical-align: top;
-  text-align: center; /* center everything in each cell */
-}
 
-main table td img {
-  display: block;
-  margin: 0 auto 8px; /* center images and give a gap */
-  max-width: 100px;
-  height: auto;
-}
-
-main table td p,
-main table td b,
-main table td figure,
-main table td figcaption {
-  margin: 0;
-  text-align: center; /* ensure names/captions are centered */
-  font-weight: 600;
-}
 
 
