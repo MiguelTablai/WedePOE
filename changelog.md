@@ -45,7 +45,7 @@ Completed between 29 September - 3rd November 2025
 
 
 
--Added greeting under heading when loading homepage.
+-Added greeting under title when loading homepage.
 
 -Added transform + transition effect to product table on mouse hover.
 
