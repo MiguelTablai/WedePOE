@@ -50,6 +50,50 @@
 
         <hr>
 
+
+        <!-- Enquiry Form Section -->
+        <section>
+            <h2>Product Enquiry</h2>
+            <p>Interested in our cold brews? Use the form below to enquire about product availability or pricing.</p>
+
+            <form id="enquiryForm">
+                <p>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </p>
+
+                <p>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                </p>
+
+                <p>
+                    <label for="product">Select a Product:</label><br>
+                    <select id="product" name="product" required>
+                        <option value="">-- Please Choose --</option>
+                        <option value="vanilla">Vanilla Bean Cold Brew</option>
+                        <option value="mocha">Mocha Hazelnut Cold Brew</option>
+                        <option value="citrus">Citrus Cold Brew</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="message">Additional Message:</label><br>
+                    <textarea id="message" name="message" rows="5" placeholder="Ask about cost, availability, or anything else..."></textarea>
+                </p>
+
+                 <p>
+                    <button type="submit">Submit Enquiry</button>
+                </p>
+            </form>
+
+            <!-- Response Message -->
+            <div id="responseMessage" style="margin-top: 20px; font-weight: bold;"></div>
+        </section>
+
+        <script src="enquiry.js"></script>
+
+
         <!-- Contact Form -->
         <section>
             <h2>Send a Message</h2>
@@ -77,9 +121,9 @@
         <!-- Contact Information Section -->
         <section id="contact-info">
             <h2>Contact Information</h2>
-            <p>Email: info@example.com</p>
-            <p>Phone: +27 123 456 7890</p>
-            <p>Address: 123 Main Street, Cape Town, South Africa</p>
+            <p>Email: Frostflow@gmail.com</p>
+            <p>Phone: +27 83 254 8097</p>
+            <p>Address: 25 Adderley Street, Cape Town, South Africa</p>
         </section>
 
     </main>
